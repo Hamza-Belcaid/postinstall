@@ -1,13 +1,9 @@
 #!/bin/bash
 
-echo -e "Choose your AUR helper : 1-yay | 2-paru"
+echo -e "Choose your AUR helper : ( yay | paru )"
 read $aur
 
-if [ $aur == "yay" ]; then
-    echo "Using yay as the AUR helper"
-elif [ $aur == "paru" ]; then
-    echo "Using paru as the AUR helper"
-else
+if [[ $aur != "yay" && $aur != paru ]]; then
     echo "Invalid option! \nPlease restart the script and enter a valid option (yay or paru)"
 fi
 
